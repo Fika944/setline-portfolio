@@ -36,12 +36,6 @@ const translations = {
    "Reallığa."
   ],
   "portfolio": "Portfoliomuz",
-  "about": "Haqqımızda",
-  "aboutText": [
-   "Setline 2005-ci ildə yaradılmış Khatt Şirkətlər Qrupunun rebrendinqi nəticəsində formalaşmışdır. Bu yenilənmənin məqsədi ayrı-ayrı layihələrə fokuslanmaq əvəzinə, müxtəlif biznes sahələrinin davamlı və uğurlu inkişafına yönəlmiş, bir-birini tamamlayan və gücləndirən xidmət və təkliflər sistemi yaratmaq idi.",
-   "Bu gün Setline geniş xidmət çeşidi təqdim edən, yüksək səviyyədə təşkilatlanmış, çevik və dinamik şirkətdir. Şirkətin bütün bölmələri xarici mühitlə ahəngdar qarşılıqlı əlaqədə fəaliyyət göstərir və cəmiyyətin daim dəyişən tələbləri və tendensiyaları ilə ayaqlaşır. Müştərilərimizin biznesini inkişaf etdirmək və keyfiyyətini yüksəltmək üçün şirkət hər bir problemin ən yaxşı həllini tapmağa çalışır, mövcud qanunvericilik çərçivəsində fəaliyyət göstərir və əsas etik və mənəvi dəyərlərə sadiq qalır. Müştərilərlə işə başlayarkən, ilk növbədə, hər bir layihə və ya təklifin özünəməxsusluğunu nəzərə alır və hər biri üçün peşəkar, yaradıcı həllər təklif edirik. Bu yanaşma və şirkətin çevik qiymət siyasəti geniş xidmət çeşidini daha münasib qiymətlərlə təqdim etməyə imkan verir.",
-   "Nəticədə şirkətimiz zəngin təcrübə qazanmış və bir sıra unikal, müasir layihələrə imza atmışdır. İcra zamanı tətbiq olunan innovativ həllər sayəsində layihələrimiz asanlıqla tanınır, digərlərindən fərqlənir və böyük maraq doğurur. Biznes uğurumuzun əsasında iki amil dayanır: məhsul və xidmətlərimizdə tam aydınlıq və dürüstlük təqdim edirik."
-  ],
   "contact": "Əlaqə",
   "address": "Ünvan",
   "phone": "Telefon",
@@ -96,12 +90,6 @@ const translations = {
    "to Reality."
   ],
   "portfolio": "Our portfolio",
-  "about": "About us",
-  "aboutText": [
-   "Setline has emerged since Khatt Group of Companies, established in 2005, went through a rebranding process. The purpose of this reformation was to avoid focusing on separate projects and to create a line of services and offers aimed at the sustainable and successful development of various business areas, which should be mutually complementary and reinforcing.",
-   "Today, Setline is a highly organized, flexible and dynamic business offering a wide range of services. All company divisions interact harmoniously with the outside world and keep up with the ever-changing demands and trends of society. To help our clients develop their business and improve its quality, the company always seeks the best possible solution to any problem, while it operates under the existing legislation and is committed to upholding core ethical and moral values in its work. When starting to work with clients, we are, above all, directed by the unique nature of any project or proposal and offer professional, creative solutions to each of them. This approach and the flexible pricing policy adopted by the Company enable us to provide a wide range of services at more affordable prices.",
-   "As a result, our company has gained a wealth of experience and authored a number of unique, state-of-the-art projects. Due to the innovative solutions applied during the implementation process, our projects are easily recognized, differ from others and attract a lot of people's interest. The key to our business success is based on two factors: we offer utmost clarity and honesty in our products and services."
-  ],
   "contact": "Contact",
   "address": "Address",
   "phone": "Phone",
@@ -236,8 +224,6 @@ function setLanguage(next) {
  const accent = document.createElement('span'); accent.textContent = language === 'en' ? 'Reality.' : t.heading[1]; heading.append(accent);
  document.querySelector('.hero-content > p').textContent = t.intro;
  document.querySelector('#catalogues > h2').textContent = t.portfolio;
- document.querySelector('.about-grid > h2').textContent = t.about;
- document.querySelectorAll('.about-copy p').forEach((element, i) => element.textContent = t.aboutText[i]);
  document.querySelector('#contact > h2').textContent = t.contact;
  document.querySelectorAll('.contact-grid h3').forEach((element, i) => element.textContent = [t.address, t.phone, t.email][i]);
  document.querySelector('address').replaceChildren(t.addressLines[0], document.createElement('br'), t.addressLines[1]);
