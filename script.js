@@ -23,34 +23,254 @@ const projectsByCategory = {
   {title:'Business gift collection',image:'promotional-2.webp',description:'A corporate gift concept combining useful products, considered presentation and brand applications.'}
  ]
 };
-function openProject(project) {
- document.getElementById('project-title').textContent = project.title;
+projectsByCategory.museums = [projectsByCategory.exhibition[1]];
+projectsByCategory.exhibition = [projectsByCategory.exhibition[0]];
+projectsByCategory.events = [];
+delete projectsByCategory.promotional;
+const translations = {
+ "az": {
+  "title": "Setline — İdeyadan reallığa",
+  "intro": "Setline — reklam istehsalı, tədbir və sərgilərin təşkili və texniki təminatı, eləcə də konsepsiyadan reallaşdırmaya qədər muzeylərin yaradılması üzrə ixtisaslaşmış şirkətdir.",
+  "heading": [
+   "İdeyadan",
+   "Reallığa."
+  ],
+  "portfolio": "Portfoliomuz",
+  "about": "Haqqımızda",
+  "aboutText": [
+   "Setline 2005-ci ildə yaradılmış Khatt Şirkətlər Qrupunun rebrendinqi nəticəsində formalaşmışdır. Bu yenilənmənin məqsədi ayrı-ayrı layihələrə fokuslanmaq əvəzinə, müxtəlif biznes sahələrinin davamlı və uğurlu inkişafına yönəlmiş, bir-birini tamamlayan və gücləndirən xidmət və təkliflər sistemi yaratmaq idi.",
+   "Bu gün Setline geniş xidmət çeşidi təqdim edən, yüksək səviyyədə təşkilatlanmış, çevik və dinamik şirkətdir. Şirkətin bütün bölmələri xarici mühitlə ahəngdar qarşılıqlı əlaqədə fəaliyyət göstərir və cəmiyyətin daim dəyişən tələbləri və tendensiyaları ilə ayaqlaşır. Müştərilərimizin biznesini inkişaf etdirmək və keyfiyyətini yüksəltmək üçün şirkət hər bir problemin ən yaxşı həllini tapmağa çalışır, mövcud qanunvericilik çərçivəsində fəaliyyət göstərir və əsas etik və mənəvi dəyərlərə sadiq qalır. Müştərilərlə işə başlayarkən, ilk növbədə, hər bir layihə və ya təklifin özünəməxsusluğunu nəzərə alır və hər biri üçün peşəkar, yaradıcı həllər təklif edirik. Bu yanaşma və şirkətin çevik qiymət siyasəti geniş xidmət çeşidini daha münasib qiymətlərlə təqdim etməyə imkan verir.",
+   "Nəticədə şirkətimiz zəngin təcrübə qazanmış və bir sıra unikal, müasir layihələrə imza atmışdır. İcra zamanı tətbiq olunan innovativ həllər sayəsində layihələrimiz asanlıqla tanınır, digərlərindən fərqlənir və böyük maraq doğurur. Biznes uğurumuzun əsasında iki amil dayanır: məhsul və xidmətlərimizdə tam aydınlıq və dürüstlük təqdim edirik."
+  ],
+  "contact": "Əlaqə",
+  "address": "Ünvan",
+  "phone": "Telefon",
+  "email": "E-poçt",
+  "addressLines": [
+   "Globus Center, 11-ci mərtəbə,",
+   "609, Cəfər Cabbarlı küçəsi, Bakı"
+  ],
+  "view": "Layihələrə bax",
+  "close": "Bağla",
+  "closePortfolio": "Portfolionu bağla",
+  "closeProject": "Layihəni bağla",
+  "concept": "Konsept layihə",
+  "conceptFull": "Konsept layihə · İllüstrativ nümunə",
+  "empty": "Bu bölməyə layihələr tezliklə əlavə olunacaq.",
+  "skip": "Əsas məzmuna keç",
+  "home": "Setline ana səhifə",
+  "switch": "Dil seçimi",
+  "heroAlt": "Sərgi stendi, çap dizaynı, promo məhsullar, brend maketləri və xarici reklam kollajı",
+  "categories": {
+   "exhibition": {
+    "title": "Sərgilər",
+    "description": "Sərgi konsepsiyaları, məkan planlaşdırılması, stendlər və pavilyonlar."
+   },
+   "events": {
+    "title": "Tədbirlər və təchizat",
+    "description": "Tədbirlərin təşkili, avadanlıqla təchizatı və texniki təminatı."
+   },
+   "museums": {
+    "title": "Muzeylər",
+    "description": "Konsepsiyadan reallaşdırmaya qədər muzeylər, ekspozisiyalar və interaktiv həllər."
+   },
+   "outdoor": {
+    "title": "Daxili və xarici reklam",
+    "description": "Vitrinlər və fasadlar, işıqlı lövhələr, həcmli hərflər, daxili və xarici reklam."
+   },
+   "publishing": {
+    "title": "Nəşriyyat və çap",
+    "description": "Nəşriyyat xidmətləri, rəqəmsal və ofset çapı — kitablar, jurnallar və broşürlər."
+   },
+   "graphic": {
+    "title": "Kreativ və dizayn",
+    "description": "Loqolar, vizual kimlik, qablaşdırma və çap materialları üçün yaradıcı dizayn."
+   }
+  }
+ },
+ "en": {
+  "title": "Setline — From Idea to Reality",
+  "intro": "Setline is a company specialising in advertising production, the organisation and technical support of events and exhibitions, and the creation of museums from concept to completion.",
+  "heading": [
+   "From Idea",
+   "to Reality."
+  ],
+  "portfolio": "Our portfolio",
+  "about": "About us",
+  "aboutText": [
+   "Setline has emerged since Khatt Group of Companies, established in 2005, went through a rebranding process. The purpose of this reformation was to avoid focusing on separate projects and to create a line of services and offers aimed at the sustainable and successful development of various business areas, which should be mutually complementary and reinforcing.",
+   "Today, Setline is a highly organized, flexible and dynamic business offering a wide range of services. All company divisions interact harmoniously with the outside world and keep up with the ever-changing demands and trends of society. To help our clients develop their business and improve its quality, the company always seeks the best possible solution to any problem, while it operates under the existing legislation and is committed to upholding core ethical and moral values in its work. When starting to work with clients, we are, above all, directed by the unique nature of any project or proposal and offer professional, creative solutions to each of them. This approach and the flexible pricing policy adopted by the Company enable us to provide a wide range of services at more affordable prices.",
+   "As a result, our company has gained a wealth of experience and authored a number of unique, state-of-the-art projects. Due to the innovative solutions applied during the implementation process, our projects are easily recognized, differ from others and attract a lot of people's interest. The key to our business success is based on two factors: we offer utmost clarity and honesty in our products and services."
+  ],
+  "contact": "Contact",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "E-mail",
+  "addressLines": [
+   "Globus Center, 11th floor,",
+   "609, Jafar Jabbarlı street, Baku"
+  ],
+  "view": "View projects",
+  "close": "Close",
+  "closePortfolio": "Close portfolio",
+  "closeProject": "Close project",
+  "concept": "Concept project",
+  "conceptFull": "Concept project · Illustrative example",
+  "empty": "Projects will be added to this section soon.",
+  "skip": "Skip to content",
+  "home": "Setline home",
+  "switch": "Select language",
+  "heroAlt": "Collage of an exhibition stand, print design, promotional products, branding mockups and outdoor advertising",
+  "categories": {
+   "exhibition": {
+    "title": "Exhibitions",
+    "description": "Exhibition concepts, spatial planning, stands and pavilions."
+   },
+   "events": {
+    "title": "Events and equipment",
+    "description": "Event organisation, equipment and technical support."
+   },
+   "museums": {
+    "title": "Museums",
+    "description": "Museums, exhibitions and interactive experiences, from concept to completion."
+   },
+   "outdoor": {
+    "title": "Indoor and outdoor advertising",
+    "description": "Storefronts and facades, illuminated signs, dimensional lettering, indoor and outdoor advertising."
+   },
+   "publishing": {
+    "title": "Digital and offset printing",
+    "description": "Publishing services, digital and offset printing — books, magazines and brochures."
+   },
+   "graphic": {
+    "title": "Creative and design",
+    "description": "Creative design for logos, visual identities, packaging and printed materials."
+   }
+  }
+ }
+};
+const projectTranslations = {
+ "Art book": [
+  "İncəsənət kitabı",
+  "Təmkinli tipoqrafiyanı və toxunma hissi yaradan çap işləmələrini birləşdirən, fotoşəkillərə əsaslanan nəşr konsepsiyası."
+ ],
+ "Editorial magazine": [
+  "Jurnal dizaynı",
+  "Aydın tipoqrafik iyerarxiyaya və qara, ağ və qırmızı rəng ritminə malik jurnal tərtibatı konsepsiyası."
+ ],
+ "Exhibition stand": [
+  "Sərgi stendi",
+  "Brend səthlərini, nümayiş sahələrini və ziyarətçilərlə qarşılıqlı əlaqə məkanını birləşdirən stend konsepsiyası."
+ ],
+ "Museum exhibition": [
+  "Muzey ekspozisiyası",
+  "Məkan vasitəsilə hekayə anlatımını, ekspozisiya dizaynını və interaktiv medianı birləşdirən tematik sərgi konsepsiyası."
+ ],
+ "Storefront signage": [
+  "Vitrin lövhəsi",
+  "Vitrini vahid vizual kimliklə birləşdirən işıqlı reklam lövhəsi konsepsiyası."
+ ],
+ "Facade lightbox": [
+  "Fasad işıq qutusu",
+  "Qaranlıqda aydın görünməsi üçün hazırlanmış böyükformatlı işıqlı reklam konsepsiyası."
+ ],
+ "Visual identity": [
+  "Vizual kimlik",
+  "Loqonun tətbiqləri, dəftərxana ləvazimatları və çap olunmuş brend materialları ilə ifadə olunan vizual kimlik konsepsiyası."
+ ],
+ "Packaging design": [
+  "Qablaşdırma dizaynı",
+  "Minimal qrafika və seçilmiş rəng palitrasından istifadə edən vahid qablaşdırma konsepsiyası."
+ ]
+};
+
+let language = 'az';
+let selectedCategory = null;
+let selectedProject = null;
+const text = () => translations[language];
+const projectText = project => language === 'az' ? {title: projectTranslations[project.title][0], description: projectTranslations[project.title][1]} : project;
+function renderProject(project) {
+ const translated = projectText(project);
+ document.getElementById('project-title').textContent = translated.title;
  const img = document.getElementById('project-image');
  img.src = 'assets/' + project.image;
- img.alt = project.title + ' — concept project';
- document.getElementById('project-description').textContent = project.description;
+ img.alt = translated.title + ' — ' + text().concept;
+ document.getElementById('project-description').textContent = translated.description;
+}
+function openProject(project) {
+ selectedProject = project;
+ renderProject(project);
  projectDialog.showModal();
 }
+function renderPortfolio(category) {
+ document.getElementById('portfolio-title').textContent = text().categories[category].title;
+ const grid = document.getElementById('portfolio-grid');
+ grid.replaceChildren();
+ if (!projectsByCategory[category].length) {
+  const empty = document.createElement('p'); empty.id = 'empty-portfolio'; empty.textContent = text().empty; grid.append(empty);
+ }
+ projectsByCategory[category].forEach(project => {
+  const translated = projectText(project);
+  const card = document.createElement('button'); card.type = 'button'; card.className = 'project-card';
+  const img = document.createElement('img'); img.src = 'assets/' + project.image; img.alt = translated.title + ' — ' + text().concept; img.loading = 'lazy';
+  const name = document.createElement('h3'); name.textContent = translated.title;
+  const label = document.createElement('span'); label.className = 'concept-label'; label.textContent = text().concept;
+  card.append(img, name, label); card.addEventListener('click', () => openProject(project)); grid.append(card);
+ });
+}
+function setLanguage(next) {
+ language = next;
+ const t = text();
+ document.documentElement.lang = language;
+ document.title = t.title;
+ document.querySelector('meta[name="description"]').content = t.intro;
+ document.querySelector('meta[property="og:title"]').content = t.title;
+ document.querySelector('meta[property="og:description"]').content = t.intro;
+ document.querySelector('.skip').textContent = t.skip;
+ document.querySelector('.brand').setAttribute('aria-label', t.home);
+ document.querySelector('.hero-photo').alt = t.heroAlt;
+ const heading = document.querySelector('h1'); heading.replaceChildren();
+ // Preserve the original English line break and red emphasis.
+ if (language === 'en') heading.append('From Idea', document.createElement('br'), 'to ');
+ else heading.append(t.heading[0], document.createElement('br'));
+ const accent = document.createElement('span'); accent.textContent = language === 'en' ? 'Reality.' : t.heading[1]; heading.append(accent);
+ document.querySelector('.hero-content > p').textContent = t.intro;
+ document.querySelector('#catalogues > h2').textContent = t.portfolio;
+ document.querySelector('.about-grid > h2').textContent = t.about;
+ document.querySelectorAll('.about-copy p').forEach((element, i) => element.textContent = t.aboutText[i]);
+ document.querySelector('#contact > h2').textContent = t.contact;
+ document.querySelectorAll('.contact-grid h3').forEach((element, i) => element.textContent = [t.address, t.phone, t.email][i]);
+ document.querySelector('address').replaceChildren(t.addressLines[0], document.createElement('br'), t.addressLines[1]);
+ document.querySelectorAll('[data-category]').forEach(button => {
+  const category = t.categories[button.dataset.category];
+  button.dataset.title = category.title; button.textContent = t.view;
+  button.parentElement.querySelector('h3').textContent = category.title;
+  button.parentElement.querySelector('p').textContent = category.description;
+ });
+ document.querySelector('.language-switch').setAttribute('aria-label', t.switch);
+ document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
+ [portfolio, projectDialog].forEach((dialog, i) => {
+  const close = dialog.querySelector('.close'); close.textContent = t.close; close.setAttribute('aria-label', i === 0 ? t.closePortfolio : t.closeProject);
+ });
+ projectDialog.querySelector('.concept-label').textContent = t.conceptFull;
+ if (selectedCategory) renderPortfolio(selectedCategory);
+ if (selectedProject) renderProject(selectedProject);
+ try { localStorage.setItem('setline-language', language); } catch {}
+}
+document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
 document.querySelectorAll('[data-category]').forEach(button => {
  button.addEventListener('click', () => {
-  document.getElementById('portfolio-title').textContent = button.dataset.title;
-  const grid = document.getElementById('portfolio-grid');
-  grid.replaceChildren();
-  projectsByCategory[button.dataset.category].forEach(project => {
-   const card = document.createElement('button');
-   card.type = 'button'; card.className = 'project-card';
-   const img = document.createElement('img');img.src='assets/'+project.image;img.alt=project.title+' — concept project';img.loading='lazy';
-   const name = document.createElement('h3');name.textContent=project.title;
-   const label = document.createElement('span');label.className='concept-label';label.textContent='Concept project';
-   card.append(img,name,label);card.addEventListener('click',()=>openProject(project));grid.append(card);
-  });
-  portfolio.showModal();document.body.classList.add('modal-open');
+  selectedCategory = button.dataset.category; renderPortfolio(selectedCategory);
+  portfolio.showModal(); document.body.classList.add('modal-open');
  });
 });
-[portfolio,projectDialog].forEach(dialog => {
- dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
- dialog.addEventListener('close',()=>{if(!portfolio.open&&!projectDialog.open)document.body.classList.remove('modal-open');});
- dialog.addEventListener('click',event=>{
-  if(event.target===dialog){const b=dialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)dialog.close();}
+[portfolio, projectDialog].forEach(dialog => {
+ dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+ dialog.addEventListener('close', () => { if (!portfolio.open && !projectDialog.open) document.body.classList.remove('modal-open'); });
+ dialog.addEventListener('click', event => {
+  if (event.target === dialog) { const b = dialog.getBoundingClientRect(); if (event.clientX < b.left || event.clientX > b.right || event.clientY < b.top || event.clientY > b.bottom) dialog.close(); }
  });
 });
+let initialLanguage = 'az';
+try { if (localStorage.getItem('setline-language') === 'en') initialLanguage = 'en'; } catch {}
+setLanguage(initialLanguage);
