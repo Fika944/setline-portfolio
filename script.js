@@ -64,27 +64,27 @@ const translations = {
   "categories": {
    "exhibition": {
     "title": "Sərgilər",
-    "description": "Sərgi konsepsiyaları, məkan planlaşdırılması, stendlər və pavilyonlar."
+    "description": "Sərgi stendlərinin və pavilyonların konsepsiyasını hazırlayır, dizaynını, istehsalını və quraşdırılmasını həyata keçiririk."
    },
    "events": {
     "title": "Tədbirlər və təchizat",
-    "description": "Tədbirlərin təşkili, avadanlıqla təchizatı və texniki təminatı."
+    "description": "Tədbirlərin təşkilini, məkanın qurulmasını, səhnə, işıq, səs və digər avadanlıqlarla texniki təminatını həyata keçiririk."
    },
    "museums": {
     "title": "Muzeylər",
-    "description": "Konsepsiyadan reallaşdırmaya qədər muzeylər, ekspozisiyalar və interaktiv həllər."
+    "description": "Muzeyləri konsepsiyadan reallaşdırmaya qədər yaradır, ekspozisiyaları, multimedia həllərini və interaktiv elementləri vahid məkan daxilində birləşdiririk."
    },
    "outdoor": {
-    "title": "Daxili və xarici reklam",
-    "description": "Vitrinlər və fasadlar, işıqlı lövhələr, həcmli hərflər, daxili və xarici reklam."
+    "title": "Reklam istehsalı: in / out",
+    "description": "Daxili və xarici reklam vasitələri, işıqlı lövhələr, həcmli hərflər, vitrin və fasad həllərini istehsal edir, quraşdırırıq."
    },
    "publishing": {
-    "title": "Nəşriyyat və çap",
-    "description": "Nəşriyyat xidmətləri, rəqəmsal və ofset çapı — kitablar, jurnallar və broşürlər."
+    "title": "Nəşriyyat: rəqəmsal və ofset",
+    "description": "Kitab, jurnal, kataloq və digər çap məhsullarını hazırlayır, redaktə, səhifələmə, rəqəmsal və ofset çap xidmətləri göstəririk."
    },
    "graphic": {
     "title": "Kreativ və dizayn",
-    "description": "Loqolar, vizual kimlik, qablaşdırma və çap materialları üçün yaradıcı dizayn."
+    "description": "Brendlər üçün kreativ konsepsiyalar, loqotiplər, korporativ üslub, qablaşdırma və müxtəlif vizual kommunikasiya materialları hazırlayırıq."
    }
   }
  },
@@ -124,27 +124,27 @@ const translations = {
   "categories": {
    "exhibition": {
     "title": "Exhibitions",
-    "description": "Exhibition concepts, spatial planning, stands and pavilions."
+    "description": "We develop concepts for exhibition stands and pavilions and handle their design, production and installation."
    },
    "events": {
     "title": "Events and equipment",
-    "description": "Event organisation, equipment and technical support."
+    "description": "We organise events, set up venues and provide technical support with staging, lighting, sound and other equipment."
    },
    "museums": {
     "title": "Museums",
-    "description": "Museums, exhibitions and interactive experiences, from concept to completion."
+    "description": "We create museums from concept to completion, bringing exhibitions, multimedia solutions and interactive elements together within a unified space."
    },
    "outdoor": {
-    "title": "Indoor and outdoor advertising",
-    "description": "Storefronts and facades, illuminated signs, dimensional lettering, indoor and outdoor advertising."
+    "title": "Advertising production: in / out",
+    "description": "We produce and install indoor and outdoor advertising, illuminated signs, dimensional lettering, and storefront and facade solutions."
    },
    "publishing": {
-    "title": "Digital and offset printing",
-    "description": "Publishing services, digital and offset printing — books, magazines and brochures."
+    "title": "Publishing: digital and offset",
+    "description": "We produce books, magazines, catalogues and other printed materials, providing editing, page layout, digital and offset printing services."
    },
    "graphic": {
     "title": "Creative and design",
-    "description": "Creative design for logos, visual identities, packaging and printed materials."
+    "description": "We develop creative concepts, logos, corporate identities, packaging and a variety of visual communication materials for brands."
    }
   }
  }
