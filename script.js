@@ -58,23 +58,23 @@ const translations = {
   "categories": {
    "exhibition": {
     "title": "Sərgilər",
-    "description": "Sərgi stendlərinin və pavilyonların konsepsiyasını hazırlayır, dizaynını, istehsalını və quraşdırılmasını həyata keçiririk."
+    "description": "Sərgi stendlərinin və pavilyonların konsepsiyasını hazırlanması, dizaynı, istehsalı və quraşdırılmasını həyata keçiririk"
    },
    "events": {
-    "title": "Tədbirlər və təchizat",
-    "description": "Tədbirlərin təşkilini, məkanın qurulmasını, səhnə, işıq, səs və digər avadanlıqlarla texniki təminatını həyata keçiririk."
+    "title": "Tədbirlər",
+    "description": "Tədbirlərin təşkili, planlaşdırılması və koordinasiyası, məkanın qurulması və texniki təminatını həyata keçiririk"
    },
    "museums": {
     "title": "Muzeylər",
-    "description": "Muzeyləri konsepsiyadan reallaşdırmaya qədər yaradır, ekspozisiyaları, multimedia həllərini və interaktiv elementləri vahid məkan daxilində birləşdiririk."
+    "description": "Muzeylərin konsepsiyadan reallaşdırmaya qədər yaradırıq, ekspozisiyaları, multimedia həllərini və interaktiv elementləri vahid məkan daxilində birləşdiririk"
    },
    "outdoor": {
-    "title": "Reklam istehsalı: in / out",
-    "description": "Daxili və xarici reklam vasitələri, işıqlı lövhələr, həcmli hərflər, vitrin və fasad həllərini istehsal edir, quraşdırırıq."
+    "title": "Reklam istehsalı",
+    "description": "Daxili və xarici məkan üçün reklamları, genişformatlı çapları, vitrin və fasad həllərini istehsal edib və quraşdırırıq"
    },
    "publishing": {
-    "title": "Nəşriyyat: rəqəmsal və ofset",
-    "description": "Kitab, jurnal, kataloq və digər çap məhsullarını hazırlayır, redaktə, səhifələmə, rəqəmsal və ofset çap xidmətləri göstəririk."
+    "title": "Nəşriyyat",
+    "description": "Kitab, jurnal, kataloq və digər çap məhsullarını hazırlanması, redaktə, səhifələmə, rəqəmsal və ofset çap xidmətləri göstəririk"
    },
    "graphic": {
     "title": "Kreativ və dizayn",
@@ -115,19 +115,19 @@ const translations = {
     "description": "We develop concepts for exhibition stands and pavilions and handle their design, production and installation."
    },
    "events": {
-    "title": "Events and equipment",
-    "description": "We organise events, set up venues and provide technical support with staging, lighting, sound and other equipment."
+    "title": "Events",
+    "description": "We organise, plan and coordinate events, set up venues and provide technical support."
    },
    "museums": {
     "title": "Museums",
     "description": "We create museums from concept to completion, bringing exhibitions, multimedia solutions and interactive elements together within a unified space."
    },
    "outdoor": {
-    "title": "Advertising production: in / out",
-    "description": "We produce and install indoor and outdoor advertising, illuminated signs, dimensional lettering, and storefront and facade solutions."
+    "title": "Advertising production",
+    "description": "We produce and install indoor and outdoor advertising, large-format prints, and storefront and facade solutions."
    },
    "publishing": {
-    "title": "Publishing: digital and offset",
+    "title": "Publishing",
     "description": "We produce books, magazines, catalogues and other printed materials, providing editing, page layout, digital and offset printing services."
    },
    "graphic": {
