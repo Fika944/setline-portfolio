@@ -260,3 +260,25 @@ document.querySelectorAll('[data-category]').forEach(button => {
 let initialLanguage = 'az';
 try { if (localStorage.getItem('setline-language') === 'en') initialLanguage = 'en'; } catch {}
 setLanguage(initialLanguage);
+
+// Keep a tapped section bright until another tap, without treating scrolling as a tap.
+let sectionTouch = null;
+function clearSectionHighlights() {
+ document.querySelectorAll('.category[data-service].is-highlighted').forEach(card => card.classList.remove('is-highlighted'));
+}
+document.addEventListener('pointerdown', event => {
+ if (event.pointerType !== 'touch' && event.pointerType !== 'pen') return;
+ const card = event.target.closest('.category[data-service]');
+ sectionTouch = card ? {card, id: event.pointerId, x: event.clientX, y: event.clientY} : null;
+ if (!card) clearSectionHighlights();
+});
+document.addEventListener('pointerup', event => {
+ if (!sectionTouch || sectionTouch.id !== event.pointerId) return;
+ const touch = sectionTouch;
+ sectionTouch = null;
+ if (Math.hypot(event.clientX - touch.x, event.clientY - touch.y) > 12 || event.target.closest('.category[data-service]') !== touch.card) return;
+ const wasHighlighted = touch.card.classList.contains('is-highlighted');
+ clearSectionHighlights();
+ if (!wasHighlighted) touch.card.classList.add('is-highlighted');
+});
+document.addEventListener('pointercancel', () => { sectionTouch = null; });

@@ -6,7 +6,7 @@
 /* Section photos remain unmodified; the overlay keeps the text readable. */
 .category[data-service]{position:relative;isolation:isolate;background-image:var(--section-photo);background-size:cover;background-position:center}
 .category[data-service]::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(180deg,rgba(17,17,17,.72),rgba(17,17,17,.86));pointer-events:none;transition:opacity .25s ease}
-@media(hover:hover) and (pointer:fine){.category[data-service]:hover::before{opacity:.88}}
+@media(hover:hover) and (pointer:fine){.category[data-service]:hover::before{opacity:.78}}
 @media(prefers-reduced-motion:reduce){.category[data-service]::before{transition:none}}
 .category[data-service] .category-description{color:#eeeeee}
 .category[data-service] .view-projects{color:#ff8a92}
@@ -16,3 +16,5 @@
  .category[data-service="outdoor"]{--section-photo:url("assets/sections/Adv.jpg")}
  .category[data-service="publishing"]{--section-photo:url("assets/sections/Print_2.jpg")}
  .category[data-service="graphic"]{--section-photo:url("assets/sections/Design.jpg")}
+
+.category[data-service].is-highlighted::before{opacity:.78}
