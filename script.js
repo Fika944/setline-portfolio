@@ -36,6 +36,7 @@ const translations = {
    "Reallığa."
   ],
   "portfolio": "Portfoliomuz",
+  "clients": "Müştərilərimiz",
   "contact": "Əlaqə",
   "address": "Ünvan",
   "phone": "Telefon",
@@ -90,6 +91,7 @@ const translations = {
    "to Reality."
   ],
   "portfolio": "Our portfolio",
+  "clients": "Our clients",
   "contact": "Contact",
   "address": "Address",
   "phone": "Phone",
@@ -225,6 +227,7 @@ function setLanguage(next) {
  document.querySelector('.hero-content > p').textContent = t.intro;
  document.querySelector('#catalogues > h2').textContent = t.portfolio;
  document.querySelector('#contact > h2').textContent = t.contact;
+ document.getElementById('clients-title').textContent = t.clients;
  document.querySelectorAll('.contact-grid h3').forEach((element, i) => element.textContent = [t.address, t.phone, t.email][i]);
  document.querySelector('address').replaceChildren(t.addressLines[0], document.createElement('br'), t.addressLines[1]);
  document.querySelectorAll('[data-category]').forEach(button => {
