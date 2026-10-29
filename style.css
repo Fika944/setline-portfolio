@@ -18,3 +18,11 @@
  .category[data-service="graphic"]{--section-photo:url("assets/sections/Design.jpg")}
 
 .category[data-service].is-highlighted::before{opacity:.78}
+
+/* Client identities stay in their supplied monochrome SVG artwork. */
+.clients{background:#000}
+.clients-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:24px 28px;list-style:none;padding:0;margin:0}
+.client-logo{display:flex;align-items:center;justify-content:center;min-width:0;height:120px;padding:14px 4px}
+.client-logo img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:1000px){.clients-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px 28px}}
+@media(max-width:640px){.clients-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 18px}.client-logo{height:100px;padding:12px 0}}
